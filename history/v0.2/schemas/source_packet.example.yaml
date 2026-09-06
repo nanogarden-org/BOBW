@@ -1,0 +1,34 @@
+packet_id: bobw-packet-0001
+schema_version: "0.1"
+source:
+  source_id: src-example-note-001
+  original_path: fixtures/example_note.md
+  sha256: "REPLACE_WITH_COMPUTED_SHA256"
+  supplied_provenance: user-supplied local demonstration file
+  source_type: markdown
+  rights_status: unassessed
+  language:
+    detected: en
+    confidence: 1.0
+segments:
+  - segment_id: seg-src-example-note-001-0001
+    locator:
+      kind: character_span
+      start: 0
+      end: 143
+    origin_type: source_statement
+    transcription: "Example source text is preserved in a human-readable file."
+    extraction_confidence: 1.0
+    status: proposed
+transformations:
+  - run_id: run-example-001
+    kind: text_ingestion
+    tool: bobw-reference-cli
+    tool_version: "0.1"
+    input_sha256: "REPLACE_WITH_COMPUTED_SHA256"
+    output_ids:
+      - seg-src-example-note-001-0001
+review:
+  human_verified: false
+  reviewer: null
+  notes: "Demonstration packet; not canonical knowledge."

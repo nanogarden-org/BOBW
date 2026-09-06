@@ -1,0 +1,19 @@
+decision_type: bobw_warehouse_sort
+schema_version: "0.2"
+source_id: bobw-src-0123456789abcdef
+proposed_route: reusable_material
+route_status: proposed
+rationale: Reusable evidence or method candidate pending assay.
+content_factory_root: C:\Users\user\Documents\Atlases\Content-Factory
+allowed_routes:
+  - raw_artifact
+  - reusable_material
+  - active_project
+  - archive
+  - waste
+  - quarantine
+human_gate:
+  required: true
+  decision: pending
+  decided_by: null
+  decided_at: null

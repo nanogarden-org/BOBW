@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.3",
+  "text_limit_bytes": 2097152,
+  "rules": [
+    {
+      "suffixes": [".md", ".txt"],
+      "route": "raw_artifact",
+      "reason": "Readable text awaiting human assay; extension alone establishes no quality or rights."
+    }
+  ]
+}

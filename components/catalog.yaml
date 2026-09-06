@@ -1,0 +1,43 @@
+schema_version: "0.3"
+catalog_kind: proposed_content_factory_component_index
+owner: Bronson-Technologies
+namespace: nanogarden-org
+components:
+  - id: bobw
+    name: B.o.B.W. — Best of BOTH Worlds
+    version: 0.3.0
+    department: ingestion
+    roles: [customs_agent, warehouse_sorter]
+    status: local_reference_implementation
+    repository: nanogarden-org/BOBW
+    repository_url: https://github.com/nanogarden-org/BOBW
+    license: MIT
+    owns: [source_packets, evidence_segments, intake_events, candidate_handoff_receipts]
+    accepts: [local_files, local_directories]
+    emits: [human_markdown, machine_json, verified_candidate_copies]
+    authority: candidate_only
+    contract: ../schemas/contracts.yaml
+  - id: bronson-technologies
+    status: existing_architecture_hub
+    repository_url: https://github.com/nanogarden-org/bronson-technologies
+    owns: [portfolio, architecture_index, project_links]
+  - id: capture-workers
+    status: external_owner_tools_not_bundled
+    repository_url: null
+    owns: [browser_capture, transcription, chat_export]
+    integration: exported_text_files_only
+  - id: content-factory-receiver
+    status: proposed_boundary_receiver_not_implemented
+    repository_url: null
+    owns: [acknowledgements, assay, review, component_promotion]
+
+# Indexing plan, not authorization to split or relocate the owner's corpus.
+future_index_fields:
+  - component_id
+  - actual_repository_url
+  - version_or_commit
+  - inputs_and_outputs
+  - contract_version
+  - owning_department
+  - maturity_and_evidence
+  - archive_location

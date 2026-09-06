@@ -1,0 +1,11 @@
+decision_id: decision-0001
+target_id: seg-src-0042-p003-b014
+decision: accept | reject | hold
+authority:
+  name: "Named human reviewer"
+  role: "knowledge steward"
+decided_at: "2026-08-23T00:00:00Z"
+scope: "Promotion to Atlas candidate node only"
+evidence_segments:
+  - seg-src-0042-p003-b014
+notes: "A rights/privacy or release decision requires a separate gate."

@@ -1,0 +1,9 @@
+event_type: BOBW_RECORD_CREATED
+schema_version: "0.2"
+at: "2026-08-31T00:00:00Z"
+source_id: bobw-src-0123456789abcdef
+capture_class: phase_change
+route: quarantine
+route_status: proposed
+machine_record: C:\Users\user\Documents\BOBW\records\bobw-src-0123456789abcdef.json
+human_record: C:\Users\user\Documents\BOBW\records\bobw-src-0123456789abcdef.md

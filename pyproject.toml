@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bobw"
+version = "0.3.0"
+description = "B.o.B.W. Content-Factory ingestion department"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+[project.scripts]
+bobw = "bobw.cli:main"
+bobw-intake = "bobw.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,40 @@
+record_type: bobw_traveler_provenance
+schema_version: "0.2"
+department:
+  name: B.o.B.W. Ingestion Department
+  version: 0.2.0
+  owner: Bronson-Technologies
+  organization: nanogarden-org
+source:
+  source_id: bobw-src-0123456789abcdef
+  original_path: C:\yt-whisper-main\transcripts\example.txt
+  source_url: https://example.invalid/source
+  filename: example.txt
+  size_bytes: 1234
+  sha256: replace-with-real-sha256
+  source_preserved: true
+capture:
+  captured_at: "2026-08-31T00:00:00Z"
+  captured_by: human
+  capture_class: tool
+  domain: [ai, workflow-automation]
+  reason: Useful reference for a project or method.
+customs:
+  inspection_status: inspected
+  rights_status: unassessed
+  privacy_status: unassessed
+  duplicate_status: unassessed
+  source_authority: supplied_source
+processing:
+  status: captured
+  derivatives_are_noncanonical: true
+  transformations: []
+warehouse:
+  route: quarantine
+  route_status: proposed
+  destination_root: C:\Users\user\Documents\Atlases\Content-Factory
+  promotion_authority: human
+review:
+  human_verified: false
+  canonical: false
+  decision: pending

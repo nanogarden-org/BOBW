@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B.o.B.W. v0.2 | Best of BOTH Worlds</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">v0.2 · PROVENANCE-FIRST · LOCAL-FIRST · DUAL INGESTION</p>
+    <h1>B.o.B.W.</h1>
+    <p class="subtitle">Best of BOTH Worlds: the Customs Agent and warehouse sorter at the front of the Content-Factory.</p>
+    <nav><a href="index.html">Overview</a><a href="department.html">Department</a><a href="architecture.html">How it works</a><a href="use-cases.html">Where it helps</a><a href="../README.md">Repository</a></nav>
+  </header>
+  <main>
+    <section>
+      <h2>What</h2>
+      <p>B.o.B.W. is a dual-ingestion department. It receives browser captures, transcripts, ChatGPT archives, notes, documents, scans, and structured records as source “ore,” then keeps human and machine representations linked to the same evidence.</p>
+    </section>
+    <section>
+      <h2>Why</h2>
+      <p>Human-readable prose carries explanation, uncertainty, rationale, exceptions, and lived meaning. Machine-readable records carry stable identifiers, constraints, validation, routing, and repeatable processing. Durable AI systems require both.</p>
+    </section>
+    <section>
+      <h2>The promise</h2>
+      <p class="promise">A reader can see where a record came from. A model can use it without guessing its identity, confidence, or status.</p>
+      <div class="cards">
+        <article><h3>Human layer</h3><p>Markdown, source excerpts, translations, confidence notes, and review context.</p><a href="../docs/architecture.md#human-legibility-layer">Read the contract →</a></article>
+        <article><h3>Machine layer</h3><p>YAML/JSON records, source locators, type tags, and validation-ready fields.</p><a href="../schemas/source_packet.example.yaml">View a source packet →</a></article>
+        <article><h3>Customs + warehouse</h3><p>Inspect, issue traveler provenance, and propose a safe Content-Factory route.</p><a href="department.html">See the department →</a></article>
+      </div>
+    </section>
+    <section class="flow">
+      <h2>From ore to candidate material</h2>
+      <ol><li>Preserve source + checksum</li><li>Issue traveler-provenance record</li><li>Create linked human and machine views</li><li>Sort into a proposed warehouse state</li><li>Promote only with human authority</li></ol>
+      <p><a class="button" href="architecture.html">See the full workflow</a></p>
+    </section>
+  </main>
+  <footer>Designed as an inspectable reference architecture. B.o.B.W. does not autonomously declare truth, rights clearance, or publication readiness.</footer>
+</body>
+</html>

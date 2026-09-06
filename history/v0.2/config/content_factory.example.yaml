@@ -1,0 +1,31 @@
+department:
+  name: B.o.B.W. Ingestion Department
+  role: front-end Customs Agent and warehouse sorter
+  owner: Bronson-Technologies
+  organization: nanogarden-org
+
+content_factory:
+  root: C:\Users\user\Documents\Atlases\Content-Factory
+  bobw_namespace: B.o.B.W.
+  staging: B.o.B.W.\staging
+  records: B.o.B.W.\records
+  events: B.o.B.W.\events
+  exports: B.o.B.W.\exports
+  quarantine: B.o.B.W.\quarantine
+
+backlog_sources:
+  - name: youtube_whisper
+    root: C:\yt-whisper-main
+    authority: supplied_local_tool
+  - name: chatgpt_chrome_archive
+    root: C:\chatgpt-chrome-archive
+    authority: supplied_local_tool
+
+policy:
+  default_route: quarantine
+  inventory_before_staging: true
+  preserve_source: true
+  overwrite_different_artifact: false
+  delete_source: false
+  automatic_canonical_promotion: false
+  human_promotion_required: true

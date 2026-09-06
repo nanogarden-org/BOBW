@@ -1,0 +1,20 @@
+segment_id: seg-src-0042-p003-b014
+source_id: src-0042
+locator:
+  kind: page_bounding_box
+  page: 3
+  bounding_box: [72, 301, 524, 386]
+origin_type: extraction
+source_text: "Text as extracted from the source region."
+normalized_reading: null
+translation:
+  target_language: es
+  text: null
+  origin_type: translation
+  status: unresolved
+confidence:
+  ocr: 0.87
+  language_detection: 0.99
+ambiguity_flags:
+  - uncertain_character
+status: proposed

@@ -1,0 +1,31 @@
+schema_version: "0.3"
+purpose: Contract index; documentation, not runtime configuration or executable schema.
+runtime_configuration: ../config/intake.example.json
+runtime_checks: ../src/bobw/core.py
+contracts:
+  source_packet:
+    record_type: bobw_source_packet
+    required: [schema_version, packet_id, run_id, observed_at, department, source, capture, customs, processing, segments, transformations, warehouse, review]
+    identity:
+      content_id: Full SHA-256 of supplied bytes; stable across file moves.
+      occurrence_id: Hash of normalized absolute local path; local observation location.
+      packet_id: Unique immutable observation; not content identity.
+    review_invariant: {human_verified: false, canonical: false, decision: pending}
+    segment_locator: Unicode character span in the exact UTF-8 source text, end exclusive.
+    source_text_origin: supplied_text
+    extraction_confidence: null
+  event:
+    required: [schema_version, event_type, at, run_id]
+    types: [RUN_STARTED, PACKAGED, STAGED_CANDIDATE, FAILED, ROOT_FAILED, RUN_FINISHED]
+  handoff_receipt:
+    record_type: bobw_handoff_receipt
+    required: [schema_version, packet_id, content_id, record_sha256, human_sha256, original_sha256, received_at, destination, state, canonical]
+    state: received_candidate
+    canonical: false
+    meaning: Local verified copy completed; no consumer acceptance or promotion implied.
+planned_contracts:
+  - upstream_capture_manifest
+  - ocr_region_and_layout
+  - multilingual_derivative
+  - factory_consumer_acknowledgement
+  - linked_human_review_decision
