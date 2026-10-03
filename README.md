@@ -6,6 +6,29 @@ B.o.B.W. records what arrived, keeps its evidence traceable, produces linked hum
 
 **Bronson-Technologies · part of nanogarden-org.** [Attribution](docs/attribution.md)
 
+## Why this exists
+
+AI and knowledge pipelines often preserve the transformed result while weakening the path back to source identity, processing history, and human-readable evidence. B.o.B.W. treats intake as a boundary problem: **what arrived, where did it come from, what happened to it, and can both a human and a machine reconstruct that path?**
+
+The reference implementation is intentionally small enough to inspect and break. It is not presented as a finished ingestion standard.
+
+- [Origin, chronology, and challenge notes](ORIGIN.md)
+- [Architecture](docs/architecture.md)
+- [Validation](docs/validation.md)
+
+## Challenge this architecture
+
+Try to break the assumptions, not just the code. Useful challenges include:
+
+- two different sources that collapse into an ambiguous identity;
+- transformations that cannot be traced back to the captured input;
+- a human view and machine view that disagree;
+- a staged copy that cannot be verified;
+- routing metadata that silently becomes an acceptance decision;
+- provenance fields that are insufficient for a real downstream consumer.
+
+If a counterexample invalidates an invariant, open an issue with the smallest reproducible case you can provide.
+
 ## What, why, where and how
 
 - [Open the browser guide](site/index.html): What / Why / Where / How, with links to code and contracts.
