@@ -1,10 +1,46 @@
 # B.o.B.W. v0.3 — Best of BOTH Worlds
 
+## Project overview
+
+| Question | Answer |
+| --- | --- |
+| Business problem | Document and AI workflows can lose the connection between a source file, its processed output, and the decision to accept it. |
+| What I built | Designed a local intake and candidate-staging reference implementation that links captured source identity, machine-readable records, human-readable evidence, and integrity checks. |
+| Working today | v0.3 local reference implementation: file inventory, streaming hashes, bounded Markdown/text extraction, routing proposals, and optional verified candidate staging. |
+| Verification | [Validation record](docs/validation.md) · [Implementation](src/bobw/core.py) |
+| Limits | Hashes establish integrity of captured bytes, not upstream authorship or truth. Source URLs are operator assertions. Candidate receipt does not mean acceptance. OCR, transcription execution, and downstream acknowledgement are not implemented. |
+| Applications | Document intake automation, traceable AI workflows, integrity checks, and controlled handoffs. |
+
+[Engineering case study](docs/hiring-case-study.md) · [Run and challenge the work](#try-it)
+
 **The Content-Factory ingestion department: Customs Agent and warehouse sorter for your accumulated ore.**
 
 B.o.B.W. records what arrived, keeps its evidence traceable, produces linked human-readable and machine-readable packets, and proposes where it belongs. It lowers the handling cost of a large personal corpus while keeping the path from source to usable component visible.
 
 **Bronson-Technologies · part of nanogarden-org.** [Attribution](docs/attribution.md)
+
+## Why this exists
+
+AI and knowledge pipelines often preserve the transformed result while weakening the path back to source identity, processing history, and human-readable evidence. B.o.B.W. treats intake as a boundary problem: **what arrived, where did it come from, what happened to it, and can both a human and a machine reconstruct that path?**
+
+The reference implementation is intentionally small enough to inspect and break. It is not presented as a finished ingestion standard.
+
+- [Origin, chronology, and challenge notes](ORIGIN.md)
+- [Architecture](docs/architecture.md)
+- [Validation](docs/validation.md)
+
+## Challenge this architecture
+
+Try to break the assumptions, not just the code. Useful challenges include:
+
+- two different sources that collapse into an ambiguous identity;
+- transformations that cannot be traced back to the captured input;
+- a human view and machine view that disagree;
+- a staged copy that cannot be verified;
+- routing metadata that silently becomes an acceptance decision;
+- provenance fields that are insufficient for a real downstream consumer.
+
+If a counterexample invalidates an invariant, open an issue with the smallest reproducible case you can provide.
 
 ## What, why, where and how
 
