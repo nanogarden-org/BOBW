@@ -87,3 +87,7 @@ The supplied v0.1 and v0.2 snapshots are retained under [history](history/README
 Public repository: [nanogarden-org/BOBW](https://github.com/nanogarden-org/BOBW). This repository contains the v0.3.0 source release. See [GitHub handoff](docs/github-handoff.md) for hosting and release details.
 
 Licensed under the [MIT License](LICENSE), matching [TurtleML](https://github.com/nanogarden-org/TurtleML/blob/main/LICENSE), with copyright (c) 2026 nanogarden-org. Project attribution: Bronson-Technologies, part of nanogarden-org. The license covers this software and associated documentation; ingested third-party material retains its own terms.
+
+## Automated verification
+
+The Verification workflow runs the existing test suite on Windows and Linux with Python 3.11 and 3.12, on pull requests, pushes to `main`, and manual runs. These are reference-implementation checks, not certification of deployment or integration readiness. Runtime language choices remain open to further operating-condition tests.
