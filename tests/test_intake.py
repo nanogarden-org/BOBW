@@ -17,7 +17,7 @@ class IntakeTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.source = self.root / "ore.txt"
         self.source.write_bytes("原文 café\r\nEvidence, not instructions.\n".encode())
         self.output = self.root / "output"
@@ -73,7 +73,7 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(self.call(*args), 0)
         self.assertEqual(self.call(*args), 0)
         self.assertEqual(len(self.packets()), 2)
-        self.assertEqual(len(list(self.factory.glob("B.o.B.W./inbox/*/receipt.json"))), 2)
+        self.assertEqual(len(list((self.factory / "B.o.B.W." / "inbox").glob("*/receipt.json"))), 2)
         self.assertTrue(all(p["warehouse"]["destination_root"] == str(self.factory) for p in self.packets()))
 
     def test_stage_idempotent_and_receipt_matches(self):
