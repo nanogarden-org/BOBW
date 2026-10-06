@@ -1,5 +1,18 @@
 # B.o.B.W. v0.3 — Best of BOTH Worlds
 
+## Hiring reviewer summary
+
+| Question | Answer |
+| --- | --- |
+| Business problem | Document and AI workflows can lose the connection between a source file, its processed output, and the decision to accept it. |
+| Author contribution | Designed a local intake and candidate-staging reference implementation that links captured source identity, machine-readable records, human-readable evidence, and integrity checks. |
+| Working today | v0.3 local reference implementation: file inventory, streaming hashes, bounded Markdown/text extraction, routing proposals, and optional verified candidate staging. |
+| Inspect the evidence | [Validation record](docs/validation.md) · [Implementation](src/bobw/core.py) |
+| Limits | Hashes establish integrity of captured bytes, not upstream authorship or truth. Source URLs are operator assertions. Candidate receipt does not mean acceptance. OCR, transcription execution, and downstream acknowledgement are not implemented. |
+| Relevant assignments | Document intake automation, traceable AI workflows, integrity checks, and controlled handoffs. |
+
+[Engineering case study](docs/hiring-case-study.md) · [Run and challenge the work](#try-it)
+
 **The Content-Factory ingestion department: Customs Agent and warehouse sorter for your accumulated ore.**
 
 B.o.B.W. records what arrived, keeps its evidence traceable, produces linked human-readable and machine-readable packets, and proposes where it belongs. It lowers the handling cost of a large personal corpus while keeping the path from source to usable component visible.
