@@ -20,13 +20,7 @@ The claim is about this particular treatment and implementation history, not own
 
 ## Public chronology
 
-Git history, tags, retained historical snapshots, and release artifacts document when particular versions of this formulation were published in this repository.
-
-That chronology supports the statement:
-
-> This formulation and artifact were publicly documented here by the corresponding repository date.
-
-It does not by itself establish that no earlier related work exists, that another party later copied this work, or that an abstract architecture is exclusively owned.
+Git history identifies artifact versions and recorded dates. Commit dates and retained snapshots alone do not establish when an artifact became publicly accessible. Public-availability claims require a separately recorded publication or archival anchor. This packet does not establish a verified first-publication date. Neither repository chronology nor publication evidence establishes universal novelty, exclusive ownership of abstract ideas, or derivation by later work.
 
 ## Why the implementation is deliberately small
 
@@ -44,3 +38,15 @@ Useful failures include cases where:
 6. routing metadata gains authority it was never meant to have.
 
 Open an issue with a counterexample, related-work reference, or minimal reproduction. A broken invariant is useful evidence for the next version.
+
+## Evidence and challenge scope
+
+Hashes establish integrity of captured bytes, not upstream authorship or truth. Source URLs are operator assertions. Candidate receipt does not mean acceptance. OCR, transcription execution, and downstream acknowledgement are not implemented.
+
+[Validation record](docs/validation.md) · [Implementation](src/bobw/core.py)
+
+## Submit a useful challenge
+
+[Open an issue](https://github.com/nanogarden-org/BOBW/issues/new) with the version or commit SHA, invariant challenged, minimal synthetic input, commands or reasoning steps, expected versus observed behavior, and any relevant related-work link. Identify whether the challenge concerns implemented behavior or proposed architecture. Exclude private or unlicensed source material.
+
+Recorded processing can be traced within the captured packet. Reproduction of upstream transformations requires their inputs, tools, versions, and parameters; this implementation does not recover missing upstream processing history.
